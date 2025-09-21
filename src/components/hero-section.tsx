@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play } from "lucide-react"
+import { ArrowRight, Play, Coffee } from "lucide-react"
 
 export function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src="/modern-coffee-shop-interior-with-warm-lighting-and.jpg" alt="Essential Kopi Interior" className="w-full h-full object-cover" />
+        <img src="https://res.cloudinary.com/dptnvqq0d/image/upload/v1758182312/IMG-20250904-WA0027_1_fxprny.jpg" alt="Essential Kopi Interior" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
       </div>
 
@@ -25,20 +25,13 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                <a href="#about" className="flex items-center gap-2">
-                  Pelajari Lebih Lanjut
-                  <ArrowRight className="h-5 w-5" />
-                </a>
-              </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-foreground bg-transparent"
               >
-                <a href="mailto:info@essentialkopi.com" className="flex items-center gap-2">
-                  <Play className="h-5 w-5" />
-                  Hubungi Kami
+                <a href="#about" className="flex items-center gap-2">
+                  Pelajari lebih lanjut
                 </a>
               </Button>
             </div>
@@ -62,10 +55,10 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
+      {/* Coffee Bean Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="flex flex-col items-center space-y-2 animate-bounce">
+          <Coffee className="w-6 h-6 text-white animate-pulse" />
         </div>
       </div>
     </section>

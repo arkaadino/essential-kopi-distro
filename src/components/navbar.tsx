@@ -12,6 +12,8 @@ export function Navbar() {
     { href: "#about", label: "Tentang Kami" },
     { href: "#services", label: "Layanan" },
     { href: "#portfolio", label: "Portfolio" },
+    { href: "#gallery", label: "Galeri" },
+    { href: "#testimonials", label: "Testimoni  " },
     { href: "#contact", label: "Kontak" },
   ]
 
