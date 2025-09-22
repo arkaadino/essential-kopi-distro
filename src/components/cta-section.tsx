@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Mail, Send, MapPin, Phone, ExternalLink } from "lucide-react"
+import { Mail, Send, MapPin, Phone, ExternalLink, Clock, Coffee, Package } from "lucide-react"
 
 export function CTASection() {
   const [email, setEmail] = useState("")
@@ -31,14 +31,15 @@ export function CTASection() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
+    <section className="py-20 bg-gradient-to-br from-amber-600 via-amber-700 to-orange-700 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-12">
           {/* Header */}
           <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-balance">Meaningful Waiting</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-balance">Kunjungi Essential Kopi Hari Ini</h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto text-pretty opacity-90">
-              Siap berkolaborasi? Mari jadikan waktu tunggu Anda lebih berharga bersama Essential Kopi & Distro.
+              Rasakan pengalaman kopi premium di kafe modern Bandung atau nikmati kemudahan Kopi Saku. 
+              Kami siap memberikan yang terbaik untuk Anda!
             </p>
           </div>
 
@@ -47,10 +48,10 @@ export function CTASection() {
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <Mail className="h-6 w-6" />
-                <h3 className="text-xl font-semibold">Kirim Pesan</h3>
+                <h3 className="text-xl font-semibold">Hubungi Kami</h3>
               </div>
               
-              <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 border border-primary-foreground/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="space-y-4">
                   <div className="text-left">
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
@@ -62,7 +63,7 @@ export function CTASection() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="nama@email.com"
-                      className="w-full px-3 py-2 rounded-md bg-primary-foreground/20 border border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent"
+                      className="w-full px-4 py-3 rounded-md bg-white/20 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
                     />
                   </div>
                   
@@ -75,24 +76,24 @@ export function CTASection() {
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       rows={4}
-                      placeholder="Ceritakan tentang proyek kolaborasi yang Anda inginkan..."
-                      className="w-full px-3 py-2 rounded-md bg-primary-foreground/20 border border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent resize-none"
+                      placeholder="Tanyakan tentang menu kafe, produk Kopi Saku, reservasi tempat, atau kolaborasi bisnis..."
+                      className="w-full px-4 py-3 rounded-md bg-white/20 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent resize-none"
                     />
                   </div>
 
                   <Button
                     onClick={handleSubmit}
                     disabled={isSubmitting || !email || !message}
-                    className="w-full bg-white hover:bg-gray-100 text-gray-900 font-medium"
+                    className="w-full bg-white hover:bg-gray-100 text-amber-700 font-medium py-3 text-base"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-secondary-foreground mr-2"></div>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-amber-700 mr-2"></div>
                         Mengirim...
                       </div>
                     ) : (
                       <>
-                        <Send className="h-4 w-4 mr-2" />
+                        <Send className="h-5 w-5 mr-2" />
                         Kirim Pesan
                       </>
                     )}
@@ -101,66 +102,110 @@ export function CTASection() {
               </div>
             </div>
 
-            {/* Location & Map */}
+            {/* Location & Info */}
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <MapPin className="h-6 w-6" />
-                <h3 className="text-xl font-semibold">Lokasi Toko</h3>
+                <h3 className="text-xl font-semibold">Kunjungi Langsung</h3>
               </div>
 
-              {/* Map Preview */}
-              <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg overflow-hidden border border-primary-foreground/20">
-                <div className="relative h-48 bg-primary-foreground/20">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8984857516687!2d107.5985333!3d-6.9344444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7c381e3c5d1%3A0x5f1c1b1c1b1c1b1c!2sJl.%20Saturnus%20Tengah%20I%2C%20Margahayu%2C%20Bandung%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1600000000000!5m2!1sen!2sid"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen= {false}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="absolute inset-0"
-                  ></iframe>
-                  
-                  {/* Overlay for better visibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent pointer-events-none"></div>
-                </div>
-                
-                <div className="p-6 space-y-4">
-                  <div className="space-y-3">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20">
+                <div className="p-6 space-y-6">
+                  {/* Location Info */}
+                  <div className="space-y-4">
                     <button
                       onClick={openMaps}
-                      className="flex items-center gap-3 text-left hover:opacity-80 transition-opacity group"
+                      className="flex items-center gap-3 text-left hover:opacity-80 transition-opacity group w-full"
                     >
                       <MapPin className="h-5 w-5 flex-shrink-0" />
-                      <div>
+                      <div className="flex-1">
                         <p className="font-medium">Essential Kopi & Distro</p>
                         <p className="text-sm opacity-90">Jl. Saturnus Tengah I No. 24, Margahayu Raya, Bandung</p>
                       </div>
-                      <ExternalLink className="h-4 w-4 ml-auto opacity-60 group-hover:opacity-100" />
+                      <ExternalLink className="h-4 w-4 opacity-60 group-hover:opacity-100" />
                     </button>
                     
-                    <a
-                      href="tel:+6281234567890"
-                      className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-                    >
+                    <div className="flex items-center gap-3">
                       <Phone className="h-5 w-5" />
                       <div>
-                        <p className="font-medium">Telepon</p>
+                        <p className="font-medium">Telepon & WhatsApp</p>
                         <p className="text-sm opacity-90">+62 812-3456-7890</p>
                       </div>
-                    </a>
+                    </div>
+
+                    <div className="flex items-center gap-3">
+                      <Clock className="h-5 w-5" />
+                      <div>
+                        <p className="font-medium">Jam Operasional</p>
+                        <p className="text-sm opacity-90">Senin - Minggu: 07:00 - 22:00</p>
+                      </div>
+                    </div>
                   </div>
 
-                  <Button
-                    onClick={openMaps}
-                    className="w-full border-2 border-white/50 text-white hover:bg-white/10 hover:border-white/70"
-                  >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Buka di Google Maps
-                  </Button>
+                  {/* Action Buttons */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <Button
+                      onClick={openMaps}
+                      className="border-2 border-white/50 text-white hover:bg-white/10 hover:border-white/70 bg-transparent"
+                    >
+                      <MapPin className="h-4 w-4 mr-2" />
+                      Lokasi
+                    </Button>
+                    <Button
+                      onClick={() => window.open('https://wa.me/6281234567890?text=Halo%20Essential%20Kopi!', '_blank')}
+                      className="border-2 border-white/50 text-white hover:bg-white/10 hover:border-white/70 bg-transparent"
+                    >
+                      <Phone className="h-4 w-4 mr-2" />
+                      WhatsApp
+                    </Button>
+                  </div>
                 </div>
               </div>
+
+              {/* Products Highlight */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <h4 className="font-semibold mb-3 text-center">Yang Bisa Anda Nikmati</h4>
+                <div className="grid grid-cols-2 gap-4 text-center">
+                  <div className="space-y-2">
+                    <Coffee className="h-8 w-8 mx-auto opacity-90" />
+                    <div>
+                      <h5 className="font-medium text-sm">Kafe Experience</h5>
+                      <p className="text-xs opacity-80">Menu premium & suasana nyaman</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Package className="h-8 w-8 mx-auto opacity-90" />
+                    <div>
+                      <h5 className="font-medium text-sm">Kopi Saku</h5>
+                      <p className="text-xs opacity-80">Kemasan praktis ready to go</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center space-y-4">
+            <p className="text-lg opacity-90">Siap merasakan pengalaman kopi yang berbeda?</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                onClick={openMaps}
+                size="lg"
+                className="bg-white text-amber-700 hover:bg-gray-100 font-semibold gap-2"
+              >
+                <Coffee className="h-5 w-5" />
+                Kunjungi Kafe Sekarang
+              </Button>
+              <Button
+                onClick={() => window.open('https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20tahu%20tentang%20produk%20Kopi%20Saku', '_blank')}
+                size="lg"
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-white/10 hover:border-white bg-transparent gap-2"
+              >
+                <Package className="h-5 w-5" />
+                Order Kopi Saku
+              </Button>
             </div>
           </div>
         </div>

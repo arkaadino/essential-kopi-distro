@@ -1,19 +1,13 @@
-import type React from "react"
+// src/app/layout.tsx
 import type { Metadata } from "next"
+import { Inter } from "next/font/google"
 import "./globals.css"
 
+const inter = Inter({ subsets: ["latin"] })
+
 export const metadata: Metadata = {
-  title: "Essential Kopi & Distro - A Cup That Awakens Your Senses",
-  description:
-    "Lebih dari sekadar kopi – Essential Kopi menghadirkan pengalaman unik yang menggabungkan laundry, coffee shop, clothing, dan barber shop.",
-  keywords: "kopi, coffee, distro, laundry, barber, bandung, essential kopi",
-  authors: [{ name: "Essential Kopi & Distro" }],
-  openGraph: {
-    title: "Essential Kopi & Distro",
-    description: "A Cup That Awakens Your Senses",
-    type: "website",
-    locale: "id_ID",
-  },
+  title: "Essential Kopi & Distro - Kafe Modern Bandung",
+  description: "Kafe modern dengan kopi premium dan produk Kopi Saku. Lokasi strategis di Margahayu Raya, Bandung.",
 }
 
 export default function RootLayout({
@@ -23,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className="scroll-smooth">
-      <body className="antialiased">{children}</body>
+      <body 
+        className={`${inter.className} antialiased`}
+        suppressHydrationWarning={true} // Suppress hydration warning for browser extension attributes
+      >
+        {children}
+      </body>
     </html>
   )
 }

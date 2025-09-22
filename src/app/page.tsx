@@ -7,9 +7,9 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 
-export default function HomePage() {
+export default function App() {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
       <AboutSection />
@@ -18,6 +18,6 @@ export default function HomePage() {
       <TestimonialsSection />
       <CTASection />
       <Footer />
-    </main>
+    </div>
   )
 }
