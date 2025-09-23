@@ -82,7 +82,7 @@ export function TestimonialsSection() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-b from-amber-50 to-white">
+    <section id="testimonials" className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">Apa Kata Mereka?</h2>
@@ -239,6 +239,9 @@ export function TestimonialsSection() {
           </div>
         </div>
       </div>
+      
     </section>
+
+    
   )
 }

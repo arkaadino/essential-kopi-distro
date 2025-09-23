@@ -31,7 +31,7 @@ export function CTASection() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-amber-600 via-amber-700 to-orange-700 text-white">
+    <section id="contact" className="py-20 bg-gray-900 text-white">      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-12">
           {/* Header */}
@@ -84,7 +84,7 @@ export function CTASection() {
                   <Button
                     onClick={handleSubmit}
                     disabled={isSubmitting || !email || !message}
-                    className="w-full bg-white hover:bg-gray-100 text-amber-700 font-medium py-3 text-base"
+                    className="w-full bg-white hover:bg-gray-100 text-amber-700 font-medium"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center">
@@ -146,6 +146,7 @@ export function CTASection() {
                   <div className="grid grid-cols-2 gap-3">
                     <Button
                       onClick={openMaps}
+                      variant="outline"
                       className="border-2 border-white/50 text-white hover:bg-white/10 hover:border-white/70 bg-transparent"
                     >
                       <MapPin className="h-4 w-4 mr-2" />
@@ -153,6 +154,7 @@ export function CTASection() {
                     </Button>
                     <Button
                       onClick={() => window.open('https://wa.me/6281234567890?text=Halo%20Essential%20Kopi!', '_blank')}
+                      variant="outline"
                       className="border-2 border-white/50 text-white hover:bg-white/10 hover:border-white/70 bg-transparent"
                     >
                       <Phone className="h-4 w-4 mr-2" />
@@ -185,14 +187,14 @@ export function CTASection() {
             </div>
           </div>
 
-          {/* Bottom CTA */}
+          {/* Bottom CTA dengan Button yang Lebih Kontras */}
           <div className="text-center space-y-4">
             <p className="text-lg opacity-90">Siap merasakan pengalaman kopi yang berbeda?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 onClick={openMaps}
                 size="lg"
-                className="bg-white text-amber-700 hover:bg-gray-100 font-semibold gap-2"
+                className="bg-amber-600 text-white hover:bg-amber-700 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Coffee className="h-5 w-5" />
                 Kunjungi Kafe Sekarang
@@ -201,7 +203,7 @@ export function CTASection() {
                 onClick={() => window.open('https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20tahu%20tentang%20produk%20Kopi%20Saku', '_blank')}
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white/10 hover:border-white bg-transparent gap-2"
+                className="bg-white text-amber-700 hover:bg-amber-50 border-2 border-amber-600 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Package className="h-5 w-5" />
                 Order Kopi Saku

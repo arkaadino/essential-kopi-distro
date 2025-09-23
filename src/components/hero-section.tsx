@@ -3,11 +3,11 @@ import { Coffee, ShoppingBag } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-amber-950">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://res.cloudinary.com/dptnvqq0d/image/upload/v1758182312/IMG-20250904-WA0027_1_fxprny.jpg" 
+          src="https://res.cloudinary.com/dptnvqq0d/image/upload/v1758632793/lobby_fzl6zu.png" 
           alt="Essential Kopi Cafe Interior" 
           className="w-full h-full object-cover" 
         />
@@ -19,12 +19,14 @@ export function HeroSection() {
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance">
-                Essential Kopi <span className="text-amber-700">Bandung</span>
-              </h1>
+              <div className="flex items-center gap-6 justify-center lg:justify-start">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance">
+                  Essential Kopi Bandung
+                </h1>
+              </div>
               <p className="text-lg md:text-xl text-gray-200 max-w-2xl text-pretty">
                 Kafe modern dengan kopi premium berkualitas tinggi. Nikmati di tempat atau bawa pulang 
-                <span className="text-amber-300"> "Kopi Saku"</span> kami yang praktis.
+                <span className="text-stone-300"> "Kopi Saku"</span> kami yang praktis.
               </p>
             </div>
 
@@ -53,13 +55,24 @@ export function HeroSection() {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-8 pt-8 border-t border-white/20">
               <div className="text-center lg:text-left">
-                <div className="text-2xl md:text-3xl font-bold text-amber-700">Kafe Premium</div>
+                <div className="text-2xl md:text-3xl font-bold text-amber-600">Kafe Premium</div>
                 <div className="text-sm text-gray-300">Dine-in Experience</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl md:text-3xl font-bold text-amber-700">Kopi Saku</div>
+                <div className="text-2xl md:text-3xl font-bold text-amber-600">Kopi Saku</div>
                 <div className="text-sm text-gray-300">Ready to Go</div>
               </div>
+            </div>
+          </div>
+          
+          {/* Right Column - Single Logo Image */}
+          <div className="hidden lg:flex flex-col justify-center">
+            <div className="overflow-hidden">
+              <img 
+                src="https://res.cloudinary.com/dptnvqq0d/image/upload/v1758613319/Gemini_Generated_Image_z1qn8yz1qn8yz1qn-removebg-preview_dsv18h.png" 
+                alt="Essential Kopi Logo" 
+                className="w-full aspect-square object-cover"
+              />
             </div>
           </div>
         </div>
