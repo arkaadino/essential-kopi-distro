@@ -22,7 +22,7 @@ export function Navbar() {
     {
       name: "Gojek",
       icon: <Bike className="h-5 w-5" />,
-      url: "https://gofood.co.id/essential-kopi",
+      url: "https://gofood.co.id/bandung/restaurant/essential-kopi-8da3f4c4-2f03-4410-8c1e-5ca7b0174e52?ot=eyJtZXJjaGFudF9pZCI6ImVkZjFkZTcwLWEzNzctNDgxNi1iMmRkLWY2ZjUyMGMzODc4YyIsInVzZXJfaWQiOiIwIiwiZXhwaXJ5X3RpbWVfZXBvY2giOjE3MzY2NjQ5MjgsImRlbGl2ZXJ5X3ByaWNlIjo0MDAwLCJwYXJraW5nX2ZlZSI6MCwiZXRhX2J1ZmZlcl9taW5zIjo3LCJjdXN0b21lcl9sb2NhdGlvbiI6Ii02LjE4MjMxMywxMDYuODM2NDY0NiJ9.IWu+gztpP3w9ypmCn5u93yQSSPBg0szwNRG%2Fn76x9EY%3D",
       description: "Order via GoFood"
     },
     {
@@ -40,7 +40,7 @@ export function Navbar() {
     {
       name: "Direct Order",
       icon: <MessageCircle className="h-5 w-5" />,
-      url: "https://wa.me/",
+      url: "https://wa.me/6281234567890",
       description: "Order via Whatsapp"
     }
 
